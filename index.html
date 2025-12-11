@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.E.P. VENTURA - Boletín Informativo 2026</title>
+    <style>
+        :root {
+            --primary: #5E226C;
+            --secondary: #F6B60F;
+            --accent: #FFD700;
+            --white: #FFFFFF;
+            --light: #F8F9FA;
+            --text: #333333;
+            --shadow: rgba(66, 36, 94, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, #5a2e7a 100%);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+            margin-bottom: 30px;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.5em;
+            color: var(--secondary);
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ventura-logo {
+            font-size: 4em;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* SECTIONS */
+        .section {
+            background: var(--white);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(66, 36, 94, 0.2);
+        }
+
+        .section-header {
+            background: linear-gradient(90deg, var(--primary) 0%, #5a2e7a 100%);
+            color: var(--white);
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .section-icon {
+            font-size: 1.8em;
+            color: var(--secondary);
+        }
+
+        .section-content {
+            padding: 30px;
+        }
+
+        /* INFO CARDS */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-card p {
+            color: var(--text);
+        }
+
+        /* TABLES */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) {
+            background: var(--light);
+        }
+
+        tr:hover {
+            background: rgba(246, 182, 15, 0.1);
+        }
+
+        /* HIGHLIGHT BOXES */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1em;
+            box-shadow: 0 5px 15px rgba(246, 182, 15, 0.3);
+        }
+
+        .primary-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #5a2e7a 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: "📅";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .timeline-month {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* ACCORDION */
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+
+        .accordion-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .accordion-header:hover {
+            background: #5a2e7a;
+        }
+
+        .accordion-header::after {
+            content: "▼";
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--white);
+        }
+
+        .accordion-content.active {
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        /* PROCESS STEPS */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .step {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section-content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* UTILS */
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .font-bold { font-weight: bold; }
+        .mb-20 { margin-bottom: 20px; }
+        .mt-20 { margin-top: 20px; }
+
+        /* LISTS */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER -->
+        <div class="header fade-in">
+            <div class="ventura-logo"><img src="logo_.png" alt="" width="180"></div>
+            <h1>I.E.P. VENTURA</h1>
+            <p class="subtitle">BOLETÍN INFORMATIVO - AÑO ESCOLAR 2026</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Tacna, diciembre de 2025</p>
+        </div>
+
+        <!-- BASE LEGAL -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📜</span>
+                <span>BASE LEGAL</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <ul>
+                            <li>Ley N°26549 "Ley de los Centros Educativos Privados"</li>
+                            <li>Decreto Supremo N°005-2002-ED</li>
+                            <li>Decreto Legislativo 716, "Ley de Protección al Consumidor"</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <ul>
+                            <li>Ley N°27665 "Ley de Protección a la Economía Familiar"</li>
+                            <li>Decreto Supremo N°011-98-ED</li>
+                            <li>DECRETO SUPREMO N°005-2021-MINEDU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DATOS GENERALES -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🏫</span>
+                <span>1. DATOS GENERALES DE LA INSTITUCIÓN</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Denominación</h3>
+                        <p class="font-bold">INSTITUCIÓN EDUCATIVA PRIVADA VENTURA</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Dirección</h3>
+                        <p>Calle Ramón Copaja - Asoc. ATMAT Mz "G" Lte.10 y Mz "C" Lte 16<br>Distrito Gregorio Albarracín</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUTORIZACIÓN -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">✅</span>
+                <span>2. AUTORIZACIÓN DE FUNCIONAMIENTO</span>
+            </div>
+            <div class="section-content">
+                <div class="highlight-box">
+                    La Institución Educativa cuenta con:<br>
+                    <strong>Resolución Directoral Regional de Autorización N°000810</strong><br>
+                    <strong>Resolución Directoral Regional N°002864</strong> de reapertura del servicio educativo.
+                </div>
+            </div>
+        </div>
+
+        <!-- PERSONAL JERÁRQUICO -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">👥</span>
+                <span>3. PERSONAL JERÁRQUICO</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Gerente General</h3>
+                        <p class="font-bold text-primary">Nicolas Sebastian Anahua Anchapuri</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Directora</h3>
+                        <p class="font-bold text-primary">Lic. Jessica Astete Tupayachi</p>
+                    </div>
+                </div>
+                <div class="primary-box mt-20">
+                    <p class="text-center font-bold">Nuestro Equipo Docente está conformado por profesionales altamente capacitados y comprometidos con la formación integral de los estudiantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALENDARIZACIÓN -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📅</span>
+                <span>4. CALENDARIZACIÓN DEL AÑO ESCOLAR 2026</span>
+            </div>
+            <div class="section-content">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>BLOQUE</th>
+                                <th>DURACIÓN</th>
+                                <th>INICIO</th>
+                                <th>FIN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold text-primary">I BIMESTRE</td>
+                                <td>10 Semanas</td>
+                                <td>02/03/2026</td>
+                                <td>08/05/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-secondary">VACACIONES</td>
+                                <td>1 Semana</td>
+                                <td>11/05/2026</td>
+                                <td>15/05/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">II BIMESTRE</td>
+                                <td>10 Semanas</td>
+                                <td>18/05/2026</td>
+                                <td>24/07/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-secondary">VACACIONES</td>
+                                <td>1 Semana</td>
+                                <td>27/07/2026</td>
+                                <td>31/07/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">III BIMESTRE</td>
+                                <td>10 Semanas</td>
+                                <td>03/08/2026</td>
+                                <td>09/10/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-secondary">VACACIONES</td>
+                                <td>1 Semana</td>
+                                <td>12/10/2026</td>
+                                <td>16/10/2026</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">IV BIMESTRE</td>
+                                <td>09 Semanas</td>
+                                <td>19/10/2026</td>
+                                <td>18/12/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- HORARIOS -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">⏰</span>
+                <span>5. HORARIO DE CLASES</span>
+            </div>
+            <div class="section-content">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>EDUCACIÓN INICIAL</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Horario</th>
+                                            <th>Horas Pedagógicas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Ingreso</td><td>8:00 – 8:15</td><td>-</td></tr>
+                                        <tr><td>1ra Hora</td><td>8:15 – 9:00</td><td>1</td></tr>
+                                        <tr><td>2da Hora</td><td>9:00 - 9:45</td><td>1</td></tr>
+                                        <tr><td>LONCHERA</td><td>9:45 – 10:00</td><td>-</td></tr>
+                                        <tr><td>RECESO</td><td>10:00 – 10:30</td><td>-</td></tr>
+                                        <tr><td>3ra Hora</td><td>10:30 – 11:15</td><td>1</td></tr>
+                                        <tr><td>4ta Hora</td><td>11:15 – 12:00</td><td>1</td></tr>
+                                        <tr><td>REFRIGERIO</td><td>12:00 - 12:30</td><td>-</td></tr>
+                                        <tr><td>5ta Hora</td><td>12:30 - 13:15</td><td>1</td></tr>
+                                        <tr><td>6ta Hora</td><td>13:15 - 14:00</td><td>1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>EDUCACIÓN PRIMARIA</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Horario</th>
+                                            <th>Horas Pedagógicas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Ingreso</td><td>7:45 - 8:00</td><td>-</td></tr>
+                                        <tr><td>1ra Hora</td><td>8:00 - 8:45</td><td>1</td></tr>
+                                        <tr><td>2da Hora</td><td>8:45 - 9:30</td><td>1</td></tr>
+                                        <tr><td>RECESO</td><td>9:30 – 9:45</td><td>-</td></tr>
+                                        <tr><td>3ra Hora</td><td>9:45 - 10:30</td><td>1</td></tr>
+                                        <tr><td>4ta Hora</td><td>10:30 - 11:15</td><td>1</td></tr>
+                                        <tr><td>5ta Hora</td><td>11:15 - 12:00</td><td>1</td></tr>
+                                        <tr><td>REFRIGERIO</td><td>12:00 - 12:30</td><td>-</td></tr>
+                                        <tr><td>6ta Hora</td><td>12:30 - 13:15</td><td>1</td></tr>
+                                        <tr><td>7ma Hora</td><td>13:15 - 14:00</td><td>1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÁREAS Y HORAS -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📚</span>
+                <span>ÁREAS Y CUADRO DE HORAS POR NIVELES</span>
+            </div>
+            <div class="section-content">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>NIVEL INICIAL (3, 4 y 5 AÑOS)</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ÁREAS - SUB ÁREA - TALLERES</th>
+                                            <th>3 AÑOS</th>
+                                            <th>4 AÑOS</th>
+                                            <th>5 AÑOS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="text-left font-bold">MATEMÁTICA</td><td></td><td></td><td></td></tr>
+                                        <tr><td class="text-left">- Aritmética</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left">- Razonamiento Matemático</td><td>4</td><td>4</td><td>4</td></tr>
+                                        <tr><td class="text-left font-bold">COMUNICACIÓN</td><td></td><td></td><td></td></tr>
+                                        <tr><td class="text-left">- Comprensión Lectora</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left">- Creatividad comunicativa</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left">- Lenguaje</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left font-bold">PERSONAL SOCIAL</td><td></td><td></td><td></td></tr>
+                                        <tr><td class="text-left">- Historia</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left font-bold">CIENCIA Y TECNOLOGÍA</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">- Jugando con la Ciencia</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Psicomotricidad</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left">Taller de Tecnología</td><td>1</td><td>1</td><td>1</td></tr>
+                                        <tr><td class="text-left">Taller de Inglés</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Taller de Danza</td><td>1</td><td>1</td><td>1</td></tr>
+                                        <tr><td class="text-left">Educación Física</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Tutoría</td><td>1</td><td>1</td><td>1</td></tr>
+                                        <tr class="font-bold text-primary"><td class="text-center">HORAS SEMANALES</td><td>35</td><td>35</td><td>35</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>NIVEL PRIMARIO (1° A 6°)</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ÁREA</th>
+                                            <th>SUB ÁREA</th>
+                                            <th>1°</th>
+                                            <th>2°</th>
+                                            <th>3°</th>
+                                            <th>4°</th>
+                                            <th>5°</th>
+                                            <th>6°</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td rowspan="3" class="font-bold">MATEMÁTICA</td><td class="text-left">Aritmética</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Razonamiento Matemático</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Geometría</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td rowspan="3" class="font-bold">COMUNICACIÓN</td><td class="text-left">Lenguaje</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+                                        <tr><td class="text-left">Literatura</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                                        <tr><td class="text-left">Caligrafía y Ortografía</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                                        <tr><td rowspan="3" class="font-bold">CIENCIA Y TECNOLOGÍA</td><td class="text-left">Física</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Química</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Biología</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td rowspan="3" class="font-bold">PERSONAL SOCIAL</td><td class="text-left">Historia</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Geografía</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="text-left">Cívica</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                                        <tr><td class="font-bold">RELIGIÓN</td><td class="text-left">Religión</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="font-bold">INGLÉS</td><td class="text-left">Inglés</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="font-bold">ARTE</td><td class="text-left">Arte</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="font-bold">EDUCACIÓN FÍSICA</td><td class="text-left">Educación física</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="font-bold">TECNOLOGÍA</td><td class="text-left">Tecnología</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                                        <tr><td class="font-bold">TUTORÍA</td><td class="text-left">Tutoría</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                                        <tr class="font-bold text-primary"><td class="text-center" colspan="2">HORAS SEMANALES</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROPUESTA PEDAGÓGICA -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🧠</span>
+                <span>PROPUESTA PEDAGÓGICA 2026</span>
+            </div>
+            <div class="section-content">
+                <div class="highlight-box mb-20">
+                    <strong>NUESTRA EVOLUCIÓN METODOLÓGICA CON NEUROEDUCACIÓN</strong><br>
+                    <span style="font-size: 0.9em;">Modelo que activa el cerebro y desarrolla habilidades ejecutivas esenciales</span>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🎯 ENFOQUE MULTISENSORIAL</h3>
+                        <p>Los estudiantes no solo escuchan o leen, sino que también actúan, debaten, crean y modelan.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔗 INTERDISCIPLINARIEDAD</h3>
+                        <p>Conexión explícita de conceptos y habilidades entre distintas asignaturas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💡 SIN TAREAS RUTINARIAS</h3>
+                        <p>Maximizamos el aprendizaje dentro del horario escolar. Eliminamos tareas mecánicas para casa.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🌟 EVALUACIÓN FORMATIVA 360°</h3>
+                        <p>Evaluación constante por competencias con rúbricas digitales que valoran el proceso creativo.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🤖 ECOSISTEMA DIGITAL STEAM</h3>
+                        <p>Docentes mentores en IA Generativa, robótica (mBlock, Arduino), informática aplicada y plan lector bilingüe.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🏆 RECONOCIMIENTO INTEGRAL</h3>
+                        <p>Premiamos excelencia académica, innovación y valores éticos con "Badge" de convivencia armoniosa.</p>
+                    </div>
+                </div>
+                <div class="primary-box mt-20">
+                    <h3 class="text-center mb-20">🏥 DPTO. DE PSICOPEDAGOGÍA Y NEURODIVERSIDAD</h3>
+                    <p class="text-center">Soporte psicológico enfocado en el desarrollo de funciones ejecutivas y bienestar emocional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SISTEMA DE EVALUACIÓN -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📊</span>
+                <span>6. SISTEMA DE EVALUACIÓN</span>
+            </div>
+            <div class="section-content">
+                <div class="highlight-box mb-20">
+                    ESCALA DE LOGRO - CURRÍCULO NACIONAL DE EDUCACIÓN BÁSICA
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NIVEL DE LOGRO</th>
+                                <th>ESCALA</th>
+                                <th>DESCRIPCIÓN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold" style="background: #E8F5E8;">AD</td>
+                                <td class="font-bold text-primary">LOGRO DESTACADO</td>
+                                <td class="text-left">Cuando el estudiante evidencia un nivel superior a lo esperado. Demuestra aprendizajes que van más allá del nivel esperado.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold" style="background: #FFF3CD;">A</td>
+                                <td class="font-bold text-primary">LOGRO ESPERADO</td>
+                                <td class="text-left">Cuando el estudiante evidencia el nivel esperado, demostrando manejo satisfactorio en todas las tareas propuestas.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold" style="background: #FFE5CC;">B</td>
+                                <td class="font-bold text-primary">EN PROCESO</td>
+                                <td class="text-left">Cuando el estudiante está próximo al nivel esperado y requiere acompañamiento durante un tiempo razonable.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold" style="background: #FFDDDD;">C</td>
+                                <td class="font-bold text-primary">EN INICIO</td>
+                                <td class="text-left">Cuando el estudiante muestra progreso mínimo. Evidencia dificultades que requieren mayor tiempo de acompañamiento e intervención.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="primary-box mt-20">
+                    <p class="text-center">📧 El INFORME DE PROGRESO se envía al finalizar cada bimestre mediante correo institucional.</p>
+                </div>
+                <div class="highlight-box mt-20">
+                    <strong>EXONERACIÓN DE RELIGIÓN:</strong> Los padres pueden solicitarla por escrito EN LA MATRÍCULA o ANTES DE INICIAR EL PERÍODO LECTIVO. De no hacerlo, se asume que el estudiante desarrollará el área regularmente.
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTROL DE ASISTENCIA -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <span>7. CONTROL DE ASISTENCIA</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📝 REGISTRO DIARIO</h3>
+                        <p>Los docentes registran asistencia diariamente para controlar inasistencias y deserción escolar.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📞 SEGUIMIENTO</h3>
+                        <p>Los profesores realizan seguimiento mediante diálogos con los padres de familia.</p>
+                    </div>
+                </div>
+                <div class="highlight-box mt-20">
+                    <strong>NÚMERO MÁXIMO DE ESTUDIANTES POR AULA</strong>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NIVEL</th>
+                                <th>GRADO</th>
+                                <th>METAS DE ATENCIÓN APROBADAS (R.D.R. N°002864)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3" class="font-bold">INICIAL</td><td>3 años</td><td>10</td></tr>
+                            <tr><td>4 años</td><td>11</td></tr>
+                            <tr><td>5 años</td><td>16</td></tr>
+                            <tr><td rowspan="6" class="font-bold">PRIMARIA</td><td>1ro</td><td>14</td></tr>
+                            <tr><td>2do</td><td>24</td></tr>
+                            <tr><td>3ro</td><td>13</td></tr>
+                            <tr><td>4to</td><td>13</td></tr>
+                            <tr><td>5to</td><td>14</td></tr>
+                            <tr><td>6to</td><td>18</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICIOS DE APOYO -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🤝</span>
+                <span>8. SERVICIOS DE APOYO AL ESTUDIANTE</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🏥 TÓPICO DE ENFERMERÍA</h3>
+                        <p>Atención médica básica y primeros auxilios.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📱 TUTORÍA Y ORIENTACIÓN (TOE)</h3>
+                        <p>Registro de asistencia, comunicación con padres y creación de grupos de WhatsApp.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box mt-20">
+                    <strong>TALLERES COMPLEMENTARIOS (Horario extendido - Voluntario - Costo adicional)</strong>
+                </div>
+                <div class="info-grid mt-20">
+                    <div class="info-card">
+                        <h3>🎨 TALLERES ARTÍSTICOS</h3>
+                        <p>Danzas para desarrollar la persona íntegra a través de la música y danza.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>⚽ TALLERES DEPORTIVOS</h3>
+                        <p>Fútbol, básquet y vóley (masculino y femenino) para fomentar competitividad sana y trabajo en equipo.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🧮 TALLERES ACADÉMICOS</h3>
+                        <p>Declamación, Oratoria, Matemáticos, Matemática cero, nivelación, adelanto y repaso de subáreas.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💻 TALLER DE COMPUTACIÓN</h3>
+                        <p>Aprendizaje de herramientas ofimáticas (texto, hojas de cálculo, presentaciones) y redacción.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🤖 CLUB DE ROBÓTICA</h3>
+                        <p>Construcción y programación de prototipos para resolver retos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÚTILES Y UNIFORME -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🎒</span>
+                <span>9. LISTA DE ÚTILES & 10. UNIFORME</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📋 LISTA DE ÚTILES</h3>
+                        <p>Se publicará en redes sociales. Según normativa, ningún estudiante será impedido de clases sin útiles completos.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>👕 UNIFORME Y BUZO</h3>
+                        <p>La institución NO vende ni direcciona lugares de compra. Detalles se publicarán en plataforma digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIVIDADES -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🎉</span>
+                <span>11. ACTIVIDADES 2026</span>
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">MARZO</div>
+                            <p>Apertura del año académico</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">ABRIL</div>
+                            <p>Semana Santa<br>Juramentación de la Policía Escolar</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">MAYO</div>
+                            <p>Ceremonia de Homenaje al Día de la Madre</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">JUNIO</div>
+                            <p>Ceremonia de Homenaje al Día del Padre<br>Concurso de Ortografía</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">JULIO</div>
+                            <p>Concurso de canciones en inglés<br>Ceremonia de Homenaje al Día del Maestro<br>Fiestas Patrias</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">AGOSTO</div>
+                            <p>Feria de Ciencias<br>Reincorporación de Tacna al Seno Patrio</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">SETIEMBRE</div>
+                            <p>Concurso de Declamación<br>Talento VENTURA (Canto, baile y Declamación)<br>Día de la Primavera</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">OCTUBRE</div>
+                            <p>Aniversario Institucional: Día Familiar<br>Concurso de Oratoria<br>Señor de los Milagros</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">NOVIEMBRE</div>
+                            <p>Día del logro e integración familiar (Participación de padre e hijos)<br>Día de los derechos del niño</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-month">DICIEMBRE</div>
+                            <p>Concurso de Villancicos Inglés<br>Compartir por Navidad<br>Clausura del año académico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO EDUCATIVO -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🚀</span>
+                <span>12. NUESTRO PROYECTO EDUCATIVO 2026</span>
+            </div>
+            <div class="section-content">
+                <div class="primary-box mb-20">
+                    <h2 class="text-center mb-20">🎯 VENTURA: EDUCACIÓN DE VANGUARDIA</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>👨‍🏫 DOCENTES MENTORES STEAM</h3>
+                            <p>Plana docente titulada, con conocimiento en IA Generativa para educación y metodologías activas.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🌱 ECONOMÍA FAMILIAR PROTEGIDA</h3>
+                            <p>Cero cuotas de APAFA ni cobros extraordinarios. Transparencia total en la inversión.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>📲 SEGUIMIENTO EN TIEMPO REAL</h3>
+                            <p>Comunicación fluida con padres sobre avance académico y conductual vía canales digitales.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>👨‍👩‍👧 ESCUELA DE PADRES 4.0</h3>
+                            <p>Talleres bimestrales sobre Crianza Digital, Ciberseguridad y gestión emocional.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🧠 AULA "CEREBRO EN ACCIÓN"</h3>
+                            <p>Pausas activas (Brain Breaks) y estrategias de metacognición para optimizar atención y memoria.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🏆 COMPETITIVIDAD EXTERNA</h3>
+                            <p>Preparación para concursos de Robótica, Hackathons, Juegos Florales y Olimpiadas organizadas por UGEL/DRET.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>⏰ TALLER DE "HACKING" DE HÁBITOS</h3>
+                            <p>Entrenamiento en organización del tiempo y técnicas de estudio eficientes para la era digital.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🎨 CLUB DE TALENTOS "VENTURA MAKERS"</h3>
+                            <p>Espacios electivos para potenciar habilidades en programación, arte, oratoria y más.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>💪 ESCUELA DE FAMILIA "CEREBRO-SANO"</h3>
+                            <p>Promoción de hábitos de salud mental y desconexión digital saludable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFRAESTRUCTURA -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">🏗️</span>
+                <span>CONTAMOS CON: INFRAESTRUCTURA PARA EL FUTURO</span>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🏢 INFRAESTRUCTURA SMART</h3>
+                        <p>Ambientes seguros y adecuados para movilidad y aprendizaje activo.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📽️ AULAS MULTIMEDIA CONECTADAS</h3>
+                        <p>Proyectores y acceso a internet en cada salón para recursos audiovisuales.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔬 LABORATORIO STEAM & MAKER SPACE</h3>
+                        <p>Equipado con kits de robótica, computadoras y recursos para prototipado.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎥 SEGURIDAD INTEGRAL</h3>
+                        <p>Sistema de cámaras de videovigilancia en áreas comunes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🌱 RATIO PEDAGÓGICO IDEAL</h3>
+                        <p>Número reducido de estudiantes por aula para seguimiento individual.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🌿 BIOHUERTO CIENTÍFICO</h3>
+                        <p>Laboratorio natural para proyectos de biología, sostenibilidad y conciencia ambiental.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎮 ZONA DE JUEGOS Y SOCIALIZACIÓN</h3>
+                        <p>Áreas recreativas diseñadas para desarrollo psicomotor e interacción social.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COSTOS -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">💰</span>
+                <span>13. MONTO Y OPORTUNIDADES DE PAGO</span>
+            </div>
+            <div class="section-content">
+                <div class="highlight-box mb-20">
+                    <strong>AÑO ESCOLAR 2026 - COSTOS POR NIVEL</strong>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NIVEL ACADÉMICO</th>
+                                <th>INSCRIPCIÓN</th>
+                                <th>MATRÍCULA</th>
+                                <th>PENSIÓN MENSUAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">INICIAL (3,4,5 AÑOS)</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">PRIMARIA (1° A 6°)</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                                <td class="font-bold text-secondary">S/.350.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box mt-20">
+                    <strong>CRONOGRAMA DE PAGO 2026</strong>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PENSIÓN</th>
+                                <th>MES</th>
+                                <th>FECHA DE VENCIMIENTO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Matrícula</td><td>-</td><td>31/01/2026</td></tr>
+                            <tr><td>1</td><td>Marzo</td><td>31/03/2026</td></tr>
+                            <tr><td>2</td><td>Abril</td><td>30/04/2026</td></tr>
+                            <tr><td>3</td><td>Mayo</td><td>31/05/2026</td></tr>
+                            <tr><td>4</td><td>Junio</td><td>30/06/2026</td></tr>
+                            <tr><td>5</td><td>Julio</td><td>30/07/2026</td></tr>
+                            <tr><td>6</td><td>Agosto</td><td>31/08/2026</td></tr>
+                            <tr><td>7</td><td>Setiembre</td><td>30/09/2026</td></tr>
+                            <tr><td>8</td><td>Octubre</td><td>31/10/2026</td></tr>
+                            <tr><td>9</td><td>Noviembre</td><td>30/11/2026</td></tr>
+                            <tr><td>10</td><td>Diciembre</td><td>31/12/2026</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="primary-box mt-20">
+                    <p>💡 En febrero de 2025 se comunicará la entidad financiera para pagos de pensiones de marzo a diciembre.</p>
+                </div>
+
+                <div class="highlight-box mt-20">
+                    <strong>HISTÓRICO DE PAGOS (2019-2026)</strong>
+                </div>
+                <div class="table-container">
+                    <table style="font-size: 0.85em;">
+                        <thead>
+                            <tr>
+                                <th>CONCEPTO</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>2024</th>
+                                <th>2025</th>
+                                <th>2026</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-bold">CUOTA DE INGRESO</td><td>NO SE COBRA</td><td>NO SE COBRA</td><td>NO SE COBRA</td><td>RECESO</td><td>RECESO</td><td class="font-bold text-secondary">S/.300</td><td class="font-bold text-secondary">S/.350</td><td class="font-bold text-secondary">S/.350</td></tr>
+                            <tr><td class="font-bold">CUOTA DE MATRÍCULA</td><td class="font-bold text-secondary">S/.250</td><td class="font-bold text-secondary">S/.250</td><td class="font-bold text-secondary">S/.150</td><td>RECESO</td><td>RECESO</td><td class="font-bold text-secondary">S/.300</td><td class="font-bold text-secondary">S/.350</td><td class="font-bold text-secondary">S/.350</td></tr>
+                            <tr><td class="font-bold">PENSIÓN MENSUAL</td><td class="font-bold text-secondary">S/.250</td><td class="font-bold text-secondary">S/.250</td><td class="font-bold text-secondary">S/.200</td><td>RECESO</td><td>RECESO</td><td class="font-bold text-secondary">S/.300</td><td class="font-bold text-secondary">S/.350</td><td class="font-bold text-secondary">S/.350</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROCESO DE MATRÍCULA -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📝</span>
+                <span>18. PROCESO DE MATRÍCULA 2026</span>
+            </div>
+            <div class="section-content">
+                <div class="highlight-box mb-20">
+                    <strong>REQUISITOS DEL EXPEDIENTE</strong>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>ESTUDIANTES NUEVOS</span>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>1. Formulario de matrícula y contrato de servicio educativo</li>
+                                <li>2. Partida de nacimiento (solo para niños de 3 años del nivel inicial)</li>
+                                <li>3. Copia del DNI del estudiante y padres de familia</li>
+                                <li>4. Copia del Informe de Progreso de los Aprendizajes (Boleta de información)</li>
+                                <li>5. Ficha única de matrícula o constancia de matrícula del SIAGIE emitida por la I.E. de origen</li>
+                                <li>6. Constancia de No Adeudo (para traslados de instituciones educativas privadas)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>TRASLADOS DEL EXTRANJERO</span>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>1. Formulario de matrícula y contrato de servicio educativo</li>
+                                <li>2. Partida de nacimiento original</li>
+                                <li>3. Copia del DNI del estudiante y padres de familia</li>
+                                <li>4. Certificado de estudios (original y apostillado)</li>
+                                <li>5. Resolución Jefatural del MINEDU que apruebe la convalidación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box mt-20">
+                    <strong>PASOS PARA LA MATRÍCULA 2026</strong>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>SOLICITA INFORMACIÓN</h3>
+                        <p>WhatsApp: 924984609<br>Secretaría: 924984609<br>Facebook: Ventura</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>DESCARGA FORMULARIO</h3>
+                        <p>Solicítelo vía WhatsApp, Secretaría o Facebook. Adjunte requisitos.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>ENTREVISTA FAMILIAR</h3>
+                        <p>Entrevista con la familia del postulante.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>PAGO INSCRIPCIÓN Y MATRÍCULA</h3>
+                        <p>S/.350.00 cada uno</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>PRESENTE EXPEDIENTE</h3>
+                        <p>En Secretaría. Se le otorgará Resolución de Traslado.</p>
+                    </div>
+                </div>
+
+                <div class="table-container mt-20">
+                    <table>
+                        <thead>
+                            <tr><th colspan="3" class="text-center">CRONOGRAMA DE MATRÍCULA 2026</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-bold">ESTUDIANTES NUEVOS</td><td class="font-bold">02 de enero al 10 de febrero de 2025</td><td class="font-bold text-secondary">S/.350.00</td></tr>
+                            <tr><td></td><td>MATRÍCULA</td><td class="font-bold text-secondary">S/.350.00</td></tr>
+                            <tr><td></td><td>PENSIÓN MENSUAL</td><td class="font-bold text-secondary">S/.350.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- RETENCIÓN DE CERTIFICADOS -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📜</span>
+                <span>15. RETENCIÓN DE CERTIFICADOS</span>
+            </div>
+            <div class="section-content">
+                <div class="primary-box">
+                    <p class="text-center">La Institución podrá retener certificados de estudios pendientes de pago, conforme al artículo 16 de la Ley de Centros Educativos Privados modificado por Decreto de Urgencia N°002-2020.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VACANTES -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <span class="section-icon">📊</span>
+                <span>17. CUADRO DE VACANTES</span>
+            </div>
+            <div class="section-content">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NIVEL</th>
+                                <th>GRADOS</th>
+                                <th>N° DE SECCIONES</th>
+                                <th>MATRICULADOS 2024</th>
+                                <th>METAS APROBADAS</th>
+                                <th>VACANTES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3" class="font-bold">INICIAL<br>R.D.R. N°004823</td><td>3 años</td><td>1</td><td>10</td><td>10</td><td>-</td></tr>
+                            <tr><td>4 años</td><td>1</td><td>11</td><td>11</td><td>-</td></tr>
+                            <tr><td>5 años</td><td>1</td><td>16</td><td>16</td><td>-</td></tr>
+                            <tr><td rowspan="6" class="font-bold">PRIMARIA<br>R.D.R. N°0870</td><td>1ro</td><td>1</td><td>14</td><td>14</td><td>-</td></tr>
+                            <tr><td>2do</td><td>1</td><td>24</td><td>24</td><td>-</td></tr>
+                            <tr><td>3ro</td><td>1</td><td>13</td><td>13</td><td>-</td></tr>
+                            <tr><td>4to</td><td>1</td><td>13</td><td>13</td><td>-</td></tr>
+                            <tr><td>5to</td><td>1</td><td>14</td><td>14</td><td>-</td></tr>
+                            <tr><td>6to</td><td>1</td><td>16</td><td>16</td><td>-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="section fade-in" style="background: linear-gradient(135deg, var(--primary) 0%, #5a2e7a 100%);">
+            <div class="section-content text-center" style="color: var(--white);">
+                <h2 class="mb-20" style="color: var(--secondary);">¡TE ESPERAMOS EN VENTURA!</h2>
+                <div class="info-grid">
+                    <div class="info-card" style="background: rgba(255,255,255,0.1); border: 1px solid var(--secondary);">
+                        <h3 style="color: var(--secondary);">GERENTE GENERAL</h3>
+                        <p style="color: var(--white);">Nicolas Sebastian Anahua Anchapuri</p>
+                    </div>
+                    <div class="info-card" style="background: rgba(255,255,255,0.1); border: 1px solid var(--secondary);">
+                        <h3 style="color: var(--secondary);">DIRECTORA</h3>
+                        <p style="color: var(--white);">Lic. Jessica Astete Tupayachi</p>
+                    </div>
+                </div>
+                <p class="mt-20" style="font-size: 1.2em; color: var(--secondary);">
+                    <strong>CONTACTO: 924984609</strong>
+                </p>
+                <p style="margin-top: 10px;">
+                    Calle Ramón Copaja - Asoc. ATMAT Mz "G" Lte.10 | Distrito Gregorio Albarracín, Tacna
+                </p>
+                <div class="ventura-logo" style="margin-top: 20px;">🌟</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            // Close all accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.classList.remove('active');
+                item.previousElementSibling.classList.remove('active');
+            });
+            
+            // Open clicked accordion if it wasn't active
+            if (!isActive) {
+                content.classList.add('active');
+                header.classList.add('active');
+            }
+        }
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transition = 'opacity 0.8s ease-in';
+            observer.observe(el);
+        });
+
+        // Auto-open first accordion in each group
+        document.querySelectorAll('.accordion').forEach(accordion => {
+            const firstItem = accordion.querySelector('.accordion-header');
+            if (firstItem) {
+                firstItem.classList.add('active');
+                firstItem.nextElementSibling.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

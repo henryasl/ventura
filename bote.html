@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boletín Informativo I.E.P. VENTURA - Infografía 2026</title>
+  <style>
+    /* Paleta: #42245E (púrpura), #F6B60F (amarillo), blanco */
+    :root{
+      --purple:#42245E;
+      --yellow:#F6B60F;
+      --white:#FFFFFF;
+      --muted:#f5f3f7;
+      --card-shadow: 0 6px 18px rgba(66,36,94,0.12);
+      --accent-gradient: linear-gradient(135deg,var(--purple), #6a3b86);
+      --max-width: 1100px;
+      --gutter:18px;
+      --font-sans: "Helvetica Neue", Arial, sans-serif;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:var(--font-sans);
+      background:linear-gradient(180deg, #fff 0%, #fbfbfd 100%);
+      color:var(--purple);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--white);
+      border-radius:14px;
+      box-shadow:var(--card-shadow);
+      overflow:hidden;
+      border:6px solid var(--purple);
+    }
+
+    header{
+      background: linear-gradient(90deg, var(--purple) 0%, #5c3f7a 60%, var(--yellow) 100%);
+      color:var(--white);
+      padding:28px 28px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .logo {
+      width:84px;
+      height:84px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.08);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-weight:700;
+      font-size:18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      border:2px solid rgba(255,255,255,0.12);
+    }
+    header h1{
+      margin:0;
+      font-size:20px;
+      line-height:1.05;
+      letter-spacing:0.2px;
+    }
+    header p{margin:4px 0 0 0; opacity:0.95; font-size:13px}
+
+    .container{
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:22px;
+    }
+
+    /* Main column */
+    main{
+      padding:8px 6px;
+    }
+    .section{
+      background: linear-gradient(180deg, #fff 0%, var(--muted) 100%);
+      border-radius:12px;
+      padding:14px;
+      margin-bottom:16px;
+      box-shadow: 0 6px 16px rgba(66,36,94,0.04);
+      border-left:6px solid var(--purple);
+    }
+    .section .title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .badge{
+      background:var(--yellow);
+      color:var(--purple);
+      padding:6px 10px;
+      font-weight:700;
+      border-radius:8px;
+      font-size:12px;
+      box-shadow:0 2px 8px rgba(246,182,15,0.15);
+    }
+    h2{margin:0; font-size:16px; color:var(--purple)}
+    p.lead{margin:8px 0 12px 0; color:#333; font-size:14px}
+
+    /* Two-column small grids inside sections */
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    table td, table th{
+      padding:6px 8px;
+      border-bottom:1px dashed rgba(66,36,94,0.06);
+    }
+    table thead th{
+      background:var(--purple);
+      color:var(--white);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    /* Sidebar */
+    aside{
+      padding:10px;
+      position:relative;
+    }
+    .card{
+      background:var(--purple);
+      color:var(--white);
+      padding:14px;
+      border-radius:10px;
+      margin-bottom:12px;
+      box-shadow: 0 8px 30px rgba(66,36,94,0.12);
+    }
+    .card.yellow{
+      background:var(--yellow);
+      color:var(--purple);
+    }
+    .small{
+      font-size:13px;
+      opacity:0.95;
+    }
+
+    /* Activities list */
+    .activities{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:8px;
+    }
+    .activity{
+      background:linear-gradient(180deg,#fff,#fffef5);
+      border-radius:8px;
+      padding:8px;
+      border:2px solid rgba(66,36,94,0.06);
+      font-size:13px;
+    }
+
+    footer{
+      padding:16px 22px;
+      background:linear-gradient(90deg,#fff,#fbfbff);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      border-top:1px solid rgba(66,36,94,0.04);
+    }
+    .sign{
+      font-size:13px;
+      color:var(--purple);
+      text-align:right;
+    }
+    .contact{
+      background:linear-gradient(90deg,var(--yellow), #ffe48a);
+      color:var(--purple);
+      padding:10px 12px;
+      border-radius:10px;
+      font-weight:700;
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      .container{grid-template-columns:1fr;}
+      aside{order:2}
+    }
+    /* Tiny touches */
+    .muted{color:#666; font-size:13px}
+    .accent-line{height:6px; background:var(--yellow); border-radius:6px; margin:10px 0;}
+    .section pre{white-space:pre-wrap; font-family:inherit; font-size:13px; margin:0;}
+    .highlight{background:var(--purple); color:var(--white); padding:6px 8px; border-radius:6px; display:inline-block; font-weight:700;}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="document" aria-label="Boletín Informativo I.E.P. VENTURA 2026">
+    <header>
+      <div class="logo">VENTURA</div>
+      <div>
+        <h1>BOLETÍN INFORMATIVO<br><small style="font-size:12px; opacity:0.95">Tacna, diciembre de 2025 — Prestación del servicio educativo 2026</small></h1>
+        <p style="margin-top:8px; font-size:13px">Información institucional y normativa, calendario, propuesta pedagógica, servicios y matrícula.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+
+        <!-- BASE LEGAL -->
+        <section class="section" aria-labelledby="base-legal">
+          <div class="title">
+            <span class="badge">BASE LEGAL</span>
+            <h2 id="base-legal">Prestación del servicio educativo para el año escolar 2026</h2>
+          </div>
+          <p class="lead">La I.E.P. VENTURA presenta la información exigida por la Ley N° 26549 y normativa vigente para el servicio educativo.</p>
+          <div class="grid-2">
+            <div>
+              <h3 style="font-size:14px; margin:6px 0 6px 0">Normas mencionadas</h3>
+              <ul style="margin:0 0 0 18px; padding:0; font-size:13px; color:#333">
+                <li>La Ley N° 26549 “Ley de los Centros Educativos Privados”.</li>
+                <li>Decreto Supremo N° 005-2002-ED (Reglamento de Infracciones y Sanciones).</li>
+                <li>Decreto Legislativo 716, “Ley de Protección al Consumidor”.</li>
+                <li>La Ley N° 27665 “Ley de Protección a la Economía Familiar respecto al Pago de Pensiones”.</li>
+                <li>Decreto Supremo N° 011-98-ED y DS N° 005-2021-MINEDU.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="font-size:14px; margin:6px 0 6px 0">Estimado padre de familia</h3>
+              <p class="muted">La I.E.P. VENTURA, en cumplimiento, brinda la siguiente información institucional para su conocimiento y toma de decisiones.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DATOS GENERALES -->
+        <section class="section" aria-labelledby="datos">
+          <div class="title">
+            <span class="badge">1</span>
+            <h2 id="datos">Datos generales de la institución</h2>
+          </div>
+          <pre>
+Denominación: INSTITUCIÓN EDUCATIVA PRIVADA VENTURA
+Dirección: Calle Ramón Copaja - Asoc. ATMAT Mz “G” Lte. 10 y Mz “C” Lte 16 - Distrito Gregorio Albarracín
+          </pre>
+
+          <div style="margin-top:8px;">
+            <h3 style="font-size:14px">Autorización de funcionamiento</h3>
+            <p class="muted">La Institución cuenta con la Resolución Directoral Regional de Autorización N° 000810 y Resolución Directoral Regional N° 002864 de reapertura del servicio educativo.</p>
+          </div>
+
+          <div style="margin-top:6px;">
+            <h3 style="font-size:14px">Personal jerárquico</h3>
+            <p class="muted"><strong>Gerente General:</strong> Nicolas Sebastian Anahua Anchapuri<br><strong>Directora:</strong> (Nombre en documento)</p>
+            <p class="muted">Nuestro Equipo Docente está conformado por profesionales altamente capacitados y comprometidos con la formación integral de los estudiantes.</p>
+          </div>
+        </section>
+
+        <!-- CALENDARIZACIÓN -->
+        <section class="section" aria-labelledby="calendarizacion">
+          <div class="title">
+            <span class="badge">4</span>
+            <h2 id="calendarizacion">Calendarización del año escolar 2026</h2>
+          </div>
+
+          <table aria-describedby="tabla-fechas">
+            <thead>
+              <tr>
+                <th scope="col">Bloque</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Inicio</th>
+                <th scope="col">Fin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>I BIMESTRE</td><td>10 Semanas</td><td>02/03/2026</td><td>08/05/2026</td></tr>
+              <tr><td>VACACIONES</td><td>1 Semana</td><td>11/05/2026</td><td>15/05/2026</td></tr>
+              <tr><td>II BIMESTRE</td><td>10 Semanas</td><td>18/05/2026</td><td>24/07/2026</td></tr>
+              <tr><td>VACACIONES</td><td>1 Semana</td><td>27/07/2026</td><td>31/07/2026</td></tr>
+              <tr><td>III BIMESTRE</td><td>10 Semanas</td><td>03/08/2026</td><td>09/10/2026</td></tr>
+              <tr><td>VACACIONES</td><td>1 Semana</td><td>12/10/2026</td><td>16/10/2026</td></tr>
+              <tr><td>IV BIMESTRE</td><td>09 Semanas</td><td>19/10/2026</td><td>18/12/2026</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- HORARIO Y AREAS -->
+        <section class="section" aria-labelledby="horario">
+          <div class="title">
+            <span class="badge">5</span>
+            <h2 id="horario">Horario de clases, áreas y cuadro de horas por niveles</h2>
+          </div>
+
+          <h3 style="font-size:14px; margin-bottom:6px">A. Horario de clases de Inicial y Primaria</h3>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:240px; background:linear-gradient(180deg,#fff,#fff); padding:10px; border-radius:8px; border:1px solid rgba(66,36,94,0.04)">
+              <strong>EDUCACIÓN INICIAL</strong>
+              <table>
+                <tbody>
+                  <tr><td>Ingreso</td><td>8:00 – 8:15</td></tr>
+                  <tr><td>1ra</td><td>8:15 – 9:00</td></tr>
+                  <tr><td>2da</td><td>9:00 – 9:45</td></tr>
+                  <tr><td>LONCHERA</td><td>9:45 – 10:00</td></tr>
+                  <tr><td>RECESO</td><td>10:00 – 10:30</td></tr>
+                  <tr><td>3ra</td><td>10:30 – 11:15</td></tr>
+                  <tr><td>4ta</td><td>11:15 – 12:00</td></tr>
+                  <tr><td>REFRIGERIO</td><td>12:00 – 12:30</td></tr>
+                  <tr><td>5ta</td><td>12:30 – 13:15</td></tr>
+                  <tr><td>6ta</td><td>13:15 – 14:00</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="flex:1; min-width:240px; background:linear-gradient(180deg,#fff,#fff); padding:10px; border-radius:8px; border:1px solid rgba(66,36,94,0.04)">
+              <strong>EDUCACIÓN PRIMARIA</strong>
+              <table>
+                <tbody>
+                  <tr><td>Ingreso</td><td>7:45 - 8:00</td></tr>
+                  <tr><td>1ra</td><td>8:00 - 8:45</td></tr>
+                  <tr><td>2da</td><td>8:45 - 9:30</td></tr>
+                  <tr><td>RECESO</td><td>9:30 – 9:45</td></tr>
+                  <tr><td>3ra</td><td>9:45 - 10:30</td></tr>
+                  <tr><td>4ta</td><td>10:30 - 11:15</td></tr>
+                  <tr><td>5ta</td><td>11:15 - 12:00</td></tr>
+                  <tr><td>REFRIGERIO</td><td>12:00 - 12:30</td></tr>
+                  <tr><td>6ta</td><td>12:30 - 13:15</td></tr>
+                  <tr><td>7ma</td><td>13:15 - 14:00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h3 style="font-size:14px">B. Áreas y cuadro de horas</h3>
+            <p class="muted"><strong>Nivel Inicial (3, 4 y 5 años) — Horas semanales: 35</strong></p>
+
+            <table>
+              <thead>
+                <tr><th>Áreas - Sub área - Talleres</th><th>3 años</th><th>4 años</th><th>5 años</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Matemática - Aritmética</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Matemática - Razonamiento Matemático</td><td>4</td><td>4</td><td>4</td></tr>
+                <tr><td>Comunicación - Comprensión Lectora</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Comunicación - Creatividad comunicativa</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Lenguaje</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Personal Social</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Historia</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Ciencia y Tecnología</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Jugando con la Ciencia</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Psicomotricidad</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Taller de Tecnología</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>Taller de Inglés</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Taller de Danza</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>Educación Física</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Tutoría</td><td>1</td><td>1</td><td>1</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:10px">
+            <h3 style="font-size:14px">Nivel Primario — Cuadro de horas</h3>
+            <p class="muted">Horas semanales por grado: 35</p>
+
+            <table>
+              <thead>
+                <tr><th>Área / Sub área</th><th>1°</th><th>2°</th><th>3°</th><th>4°</th><th>5°</th><th>6°</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Matemática - Aritmética</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Matemática - Razonamiento</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Matemática - Geometría</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Comunicación - Lenguaje</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+                <tr><td>Comunicación - Literatura / Caligrafía / Ortografía</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                <tr><td>Ciencia y Tecnología</td><td>Física 2 / Química 2 / Biología 2 (cada una)</td><td colspan="5"></td></tr>
+                <tr><td>Personal Social - Historia / Geografía</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Cívica</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>Religión</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Inglés</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Arte</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Ed. Física</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Tecnología</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                <tr><td>Tutoría</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- PROPUESTA PEDAGÓGICA -->
+        <section class="section" aria-labelledby="propuesta">
+          <div class="title">
+            <span class="badge">PROPUESTA</span>
+            <h2 id="propuesta">Propuesta pedagógica 2026</h2>
+          </div>
+          <p class="lead">Estrategia metodológica integrada con hallazgos de la Neuroeducación para optimizar el aprendizaje y desarrollar habilidades ejecutivas, emocionales y cognitivas.</p>
+
+          <div>
+            <p class="muted">
+Nuestra metodología se centra en experiencias motivadoras que generan curiosidad y activan circuitos de recompensa, promoviendo el anclaje emocional del aprendizaje.
+            </p>
+            <p class="muted">
+Buscamos un enfoque multisensorial: los estudiantes actúan, debaten, crean y modelan; además aplicamos la interdisciplinariedad para conectar conceptos entre asignaturas.
+            </p>
+          </div>
+        </section>
+
+        <!-- SISTEMA DE EVALUACIÓN -->
+        <section class="section" aria-labelledby="evaluacion">
+          <div class="title">
+            <span class="badge">6</span>
+            <h2 id="evaluacion">Sistema de evaluación</h2>
+          </div>
+
+          <p class="muted"><strong>Escala de logro (Educación Básica)</strong></p>
+          <table>
+            <thead>
+              <tr><th>Nivel de logro</th><th>Escala</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Logro destacado</td><td>AD — Cuando el estudiante evidencia un nivel superior a lo esperado.</td></tr>
+              <tr><td>Logro esperado</td><td>A — Manejo satisfactorio en las tareas.</td></tr>
+              <tr><td>En proceso</td><td>B — Próximo al nivel esperado; requiere acompañamiento.</td></tr>
+              <tr><td>En inicio</td><td>C — Progreso mínimo; necesita intervención docente.</td></tr>
+            </tbody>
+          </table>
+
+          <p class="muted" style="margin-top:8px">* Al finalizar el bimestre se emite el Informe de Progreso del Aprendizaje del Estudiante y/o se envía por correo institucional.</p>
+
+          <h3 style="font-size:14px; margin-top:8px">Exoneración del Área de Religión</h3>
+          <p class="muted">Si un estudiante profesa una fe distinta a la católica, el padre de familia puede solicitar por escrito la exoneración en matrícula o antes del inicio del periodo lectivo; de no hacerlo, la institución asumirá participación regular.</p>
+        </section>
+
+        <!-- ASISTENCIA Y METAS -->
+        <section class="section" aria-labelledby="asistencia">
+          <div class="title">
+            <span class="badge">7</span>
+            <h2 id="asistencia">Control de asistencia y metas por aula</h2>
+          </div>
+
+          <p class="muted">El control es diario y lo registran los docentes para prevenir inasistencia y deserción. Se realiza seguimiento y comunicación con los padres de familia.</p>
+
+          <h3 style="font-size:14px">Número máximo de estudiantes por aula</h3>
+          <table>
+            <thead><tr><th>Nivel</th><th>Metas de atención aprobadas</th></tr></thead>
+            <tbody>
+              <tr><td>Inicial (3,4,5 años) — R.D.R. N° 002864</td><td>3 años:10 — 4 años:11 — 5 años:16</td></tr>
+              <tr><td>Primaria — R.D.R. N°2864</td><td>1°:14 — 2°:24 — 3°:13 — 4°:13 — 5°:14 — 6°:18</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="section" aria-labelledby="servicios">
+          <div class="title">
+            <span class="badge">8</span>
+            <h2 id="servicios">Servicios de apoyo al estudiante</h2>
+          </div>
+
+          <ol style="margin:6px 0 0 18px; color:#333; font-size:13px">
+            <li><strong>Departamento de Psicología.</strong></li>
+            <li><strong>Tutoría y Orientación del Estudiantes (TOE):</strong>
+              <ul>
+                <li>Registro diario de asistencia.</li>
+                <li>Comunicación a padres sobre inasistencias.</li>
+                <li>Creación de grupos de WhatsApp para comunicación frecuente.</li>
+              </ul>
+            </li>
+            <li><strong>Tópico de Enfermería.</strong></li>
+            <li><strong>Servicios complementarios (talleres) — fuera del horario y con costo adicional:</strong>
+              <ul>
+                <li>Talleres artísticos: Danzas.</li>
+                <li>Talleres deportivos: fútsal, básquet, vóley.</li>
+                <li>Talleres académicos: Declamación, Oratoria, Matemáticos, nivelación, adelanto.</li>
+                <li>Taller de computación e informática: ofimática y redacción.</li>
+                <li>Club de Robótica: construcción y programación de prototipos.</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- LISTA DE ÚTILES Y UNIFORME -->
+        <section class="section" aria-labelledby="utiles">
+          <div class="title">
+            <span class="badge">9-10</span>
+            <h2 id="utiles">Lista de útiles y uniforme</h2>
+          </div>
+
+          <p class="muted"><strong>Lista de útiles:</strong> Se publicarán en las redes sociales de la Institución. Según normativa, ningún estudiante estará impedido de seguir clases sin útiles completos; se invoca a los padres a colaborar para disponer de lo necesario.</p>
+
+          <p class="muted"><strong>Uniforme y buzo escolar:</strong> La Institución no vende ni indica lugares de compra; se dará información de los detalles del uniforme y buzo en la plataforma digital. Durante el año escolar 2025 se hará uso del uniforme y buzo escolar.</p>
+        </section>
+
+        <!-- ACTIVIDADES -->
+        <section class="section" aria-labelledby="actividades">
+          <div class="title">
+            <span class="badge">11</span>
+            <h2 id="actividades">Actividades por mes</h2>
+          </div>
+
+          <div class="activities" aria-hidden="false">
+            <div class="activity"><strong>MARZO</strong><br>• Apertura del año académico</div>
+            <div class="activity"><strong>ABRIL</strong><br>• Semana Santa<br>• Juramentación de la Policía Escolar</div>
+            <div class="activity"><strong>MAYO</strong><br>• Ceremonia del Día de la Madre</div>
+            <div class="activity"><strong>JUNIO</strong><br>• Ceremonia del Día del Padre<br>• Concurso de Ortografía</div>
+            <div class="activity"><strong>JULIO</strong><br>• Concurso de canciones en inglés<br>• Homenaje al Día del Maestro<br>• Fiestas Patrias</div>
+            <div class="activity"><strong>AGOSTO</strong><br>• Feria de Ciencias<br>• Reincorporación de Tacna al Seno Patrio</div>
+            <div class="activity"><strong>SETIEMBRE</strong><br>• Concurso de Declamación<br>• Talento VENTURA — Día de la Primavera</div>
+            <div class="activity"><strong>OCTUBRE</strong><br>• Aniversario Institucional: Día Familiar<br>• Concurso de Oratoria<br>• Señor de los Milagros</div>
+            <div class="activity"><strong>NOVIEMBRE</strong><br>• Día del logro e integración familiar<br>• Día de los derechos del niño</div>
+            <div class="activity"><strong>DICIEMBRE</strong><br>• Concurso de Villancicos Inglés<br>• Compartir por Navidad<br>• Clausura del año académico</div>
+          </div>
+        </section>
+
+        <!-- PROYECTO EDUCATIVO -->
+        <section class="section" aria-labelledby="proyecto">
+          <div class="title">
+            <span class="badge">12</span>
+            <h2 id="proyecto">Nuestro proyecto educativo</h2>
+          </div>
+
+          <ul style="font-size:13px; color:#333; margin-left:18px">
+            <li><strong>Docentes Mentores STEAM:</strong> Plana docente titulada con conocimientos en herramientas digitales (IA generativa para educación) y metodologías activas.</li>
+            <li><strong>Ecosistema Educativo Digital:</strong> No solicitamos textos escolares físicos costosos; fichas STEAM y plataformas interactivas.</li>
+            <li><strong>Aprendizaje potenciado por tecnología y creatividad:</strong> Robótica, mBlock, Arduino, ofimática aplicada y redacción digital.</li>
+            <li><strong>Reconocimiento al talento integral:</strong> Premios y Badges por excelencia académica y valores.</li>
+            <li><strong>Plan lector bilingüe:</strong> Lectura en físico y digital, con literatura en inglés y narrativa interactiva.</li>
+            <li><strong>Evaluación formativa 360°:</strong> Rúbricas digitales que valoran procesos creativos.</li>
+            <li><strong>Metodología "Sin tareas rutinarias":</strong> Maximizamos el aprendizaje en horario escolar; se promueven proyectos personales en tiempo libre.</li>
+            <li><strong>Economía familiar protegida:</strong> Cero cuotas APAFA ni cobros extraordinarios; transparencia.</li>
+            <li><strong>Seguimiento académico en tiempo real:</strong> Comunicación fluida con padres por canales institucionales.</li>
+            <li><strong>Atención docente personalizada:</strong> Horarios de atención presencial y virtual.</li>
+            <li><strong>Escuela de Padres 4.0:</strong> Talleres bimestrales sobre Crianza Digital, Ciberseguridad y gestión emocional.</li>
+            <li><strong>Dpto. de Psicopedagogía y Neurodiversidad.</strong></li>
+            <li><strong>Competitividad externa:</strong> Participación en concursos de Robótica, Hackathons, Juegos Florales y olimpiadas UGEL/DRET/MINEDU.</li>
+            <li><strong>Aula "Cerebro en Acción":</strong> Pausas activas y metacognición.</li>
+            <li><strong>Taller de "Hacking" de Hábitos:</strong> Organización del tiempo y técnicas de estudio.</li>
+            <li><strong>Club "Ventura Makers":</strong> Programación, arte, oratoria y liderazgo.</li>
+            <li><strong>Escuela de Familia "Cerebro-Sano":</strong> Hábitos de salud mental y desconexión digital.</li>
+          </ul>
+        </section>
+
+        <!-- INFRAESTRUCTURA -->
+        <section class="section" aria-labelledby="infra">
+          <div class="title">
+            <span class="badge">INFRA</span>
+            <h2 id="infra">Contamos con: Infraestructura para el futuro</h2>
+          </div>
+          <ul style="margin-left:18px; color:#333; font-size:13px">
+            <li><strong>Infraestructura Smart:</strong> Ambientes seguros y adecuados.</li>
+            <li><strong>Aulas multimedia conectadas:</strong> Proyectores y acceso a internet en cada salón.</li>
+            <li><strong>Laboratorio STEAM & Maker Space:</strong> Kits de robótica y computadoras para programación.</li>
+            <li><strong>Seguridad integral:</strong> Cámaras de videovigilancia en áreas comunes.</li>
+            <li><strong>Ratio pedagógico ideal:</strong> Número reducido de estudiantes por aula.</li>
+            <li><strong>Biohuerto científico:</strong> Proyectos de biología y sostenibilidad.</li>
+            <li><strong>Zona de juegos y socialización:</strong> Áreas recreativas para desarrollo psicomotor.</li>
+          </ul>
+        </section>
+
+        <!-- ECONOMIA Y PAGOS -->
+        <section class="section" aria-labelledby="economia">
+          <div class="title">
+            <span class="badge">13</span>
+            <h2 id="economia">Monto y oportunidades de pago - 2026</h2>
+          </div>
+
+          <p class="muted"><strong>Inscripción, matrícula y pensión mensual — Año escolar 2025 (referencia de montos)</strong></p>
+
+          <table>
+            <thead><tr><th>Nivel académico</th><th>Inscripción</th><th>Matrícula</th><th>Pensión mensual</th></tr></thead>
+            <tbody>
+              <tr><td>Inicial (3,4,5 años)</td><td>S/. 350.00</td><td>S/. 350.00</td><td>S/. 350.00</td></tr>
+              <tr><td>Primaria (1° a 6°)</td><td>S/. 350.00</td><td>S/. 350.00</td><td>S/. 350.00</td></tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:8px">
+            <strong>Cronograma de pago de las pensiones 2026</strong>
+            <table>
+              <tbody>
+                <tr><td>Matrícula</td><td>31/01/2026</td></tr>
+                <tr><td>1 Marzo</td><td>31/03/2026</td></tr>
+                <tr><td>2 Abril</td><td>30/04/2026</td></tr>
+                <tr><td>3 Mayo</td><td>31/05/2026</td></tr>
+                <tr><td>4 Junio</td><td>30/06/2026</td></tr>
+                <tr><td>5 Julio</td><td>30/07/2026</td></tr>
+                <tr><td>6 Agosto</td><td>31/08/2026</td></tr>
+                <tr><td>7 Setiembre</td><td>30/09/2026</td></tr>
+                <tr><td>8 Octubre</td><td>31/10/2026</td></tr>
+                <tr><td>9 Noviembre</td><td>30/11/2026</td></tr>
+                <tr><td>10 Diciembre</td><td>31/12/2026</td></tr>
+              </tbody>
+            </table>
+            <p class="muted" style="margin-top:8px">* La inscripción y matrícula se cancelará en secretaría según el cronograma. En febrero de 2025 se comunicará la entidad financiera para los pagos.</p>
+          </div>
+        </section>
+
+        <!-- RETENCION -->
+        <section class="section" aria-labelledby="retencion">
+          <div class="title">
+            <span class="badge">15</span>
+            <h2 id="retencion">Retención de certificados</h2>
+          </div>
+          <p class="muted">La Institución podrá retener los certificados de estudios correspondientes a los grados con estudios no cancelados, conforme al numeral 16.1 del artículo 16 de la Ley de Centros Educativos Privados modificado por Decreto de Urgencia N°002-2020.</p>
+        </section>
+
+        <!-- CUADRO DE VACANTES Y MATRÍCULA -->
+        <section class="section" aria-labelledby="vacantes">
+          <div class="title">
+            <span class="badge">17</span>
+            <h2 id="vacantes">Cuadro de vacantes y proceso de matrícula 2026</h2>
+          </div>
+
+          <p class="muted"><strong>Vacantes por nivel (2024 / metas aprobadas):</strong></p>
+          <table>
+            <thead><tr><th>Nivel</th><th>Grados</th><th>Secciones</th><th>Metas</th><th>Matriculados 2024</th></tr></thead>
+            <tbody>
+              <tr><td>Inicial (R.D.R. N° 004823)</td><td>3 años / 4 años / 5 años</td><td>1 / 1 / 1</td><td>10 / 11 / 16</td><td>10 / 11 / 16</td></tr>
+              <tr><td>Primaria (R.D.R. N°0870)</td><td>1° a 6°</td><td>1 por grado</td><td>14 / 24 / 13 / 13 / 14 / 16</td><td>14 / 24 / 13 / 13 / 14 / 16</td></tr>
+            </tbody>
+          </table>
+
+          <h3 style="font-size:14px; margin-top:8px">Proceso de matrícula 2026 — Requisitos</h3>
+          <p class="muted">Estudiantes nuevos: Formulario de matrícula y contrato; partida de nacimiento (3 años); copia de DNI del estudiante y padres; copia del informe de progreso; ficha única SIAGIE; constancia de no adeudo (para traslados).</p>
+
+          <h3 style="font-size:14px; margin-top:6px">Traslados del extranjero</h3>
+          <p class="muted">Formulario y contrato; partida de nacimiento original; copia del DNI; certificado de estudios original y apostillado; resolución jefatural del MINEDU aprobando convalidación de estudios.</p>
+
+          <h3 style="font-size:14px; margin-top:6px">Pasos para la matrícula 2026</h3>
+          <ol style="margin-left:18px; color:#333; font-size:13px">
+            <li>SOLICITA INFORMACIÓN (Boletín informativo): Vía WhatsApp 924984609 / Secretaría 924984609 / Facebook ColegioVenturaGAL</li>
+            <li>DESCARGA EL FORMULARIO - Adjunte requisitos.</li>
+            <li>ENTREVISTA CON LA FAMILIA DEL POSTULANTE.</li>
+            <li>PAGO POR DERECHO DE INSCRIPCIÓN Y MATRÍCULA.</li>
+            <li>PRESENTE EL EXPEDIENTE EN SECRETARÍA — Se otorgará la Resolución de Traslado.</li>
+          </ol>
+          <p class="muted">Facebook: <span style="font-weight:700">https://www.facebook.com/ColegioVenturaGAL</span></p>
+        </section>
+
+        <!-- CRONOGRAMA MATRICULA -->
+        <section class="section" aria-labelledby="cronograma">
+          <div class="title">
+            <span class="badge">19</span>
+            <h2 id="cronograma">Cronograma de matrícula 2026</h2>
+          </div>
+
+          <p class="muted">Matrícula 2025 — Inicial y Primaria (fechas referenciales):</p>
+          <table>
+            <thead><tr><th>Nivel</th><th>Fecha de matrícula</th><th>Costos</th></tr></thead>
+            <tbody>
+              <tr><td>Estudiantes nuevos</td><td>02 de enero al 10 de febrero de 2025</td><td>Inscripción S/ 350.00 — Matrícula S/ 350.00 — Pensión mensual S/ 350.00</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="card">
+          <h3 style="margin:0 0 6px 0">Contacto y consultas</h3>
+          <p class="small" style="margin:4px 0 0 0">WhatsApp / Secretaría: <strong>924984609</strong></p>
+          <p class="small" style="margin:4px 0 0 0">Facebook: <strong>ColegioVenturaGAL</strong></p>
+        </div>
+
+        <div class="card yellow">
+          <h3 style="margin:0 0 6px 0; color:var(--purple)">Inscripciones 2026</h3>
+          <p style="margin:0; color:var(--purple); font-weight:700">Inscripción / Matrícula / Pensión: S/. 350.00</p>
+        </div>
+
+        <div class="card" style="padding:12px">
+          <h4 style="margin:0 0 8px 0">Servicios destacados</h4>
+          <ul style="margin:0 0 0 14px; padding:0; font-size:13px">
+            <li>Laboratorio STEAM & Maker Space</li>
+            <li>Club de Robótica</li>
+            <li>Talleres artísticos y deportivos</li>
+            <li>Departamento de Psicopedagogía</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:12px">
+          <h4 style="margin:0 0 8px 0">Horarios</h4>
+          <p class="small" style="margin:0">Inicial: 8:00 - 14:00 · Primaria: 7:45 - 14:00</p>
+        </div>
+
+        <div class="card" style="padding:12px; border-radius:12px; margin-top:8px">
+          <h4 style="margin:0 0 8px 0">Servicios complementarios</h4>
+          <p class="small" style="margin:0">Talleres con costo adicional: danza, deportes, oratoria, informática, robótica.</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div style="min-width:56px; height:56px; border-radius:8px; background:var(--purple); color:white; display:flex; align-items:center; justify-content:center; font-weight:800">V</div>
+        <div>
+          <div style="font-weight:700; color:var(--purple)">I.E.P. VENTURA</div>
+          <div style="font-size:13px; color:#666">Tacna · Boletín informativo — Prestación del servicio educativo 2026</div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; align-items:center;">
+        <div class="sign">
+          Nicolás Sebastián Anahua Anchapuri<br>
+          Gerente General
+        </div>
+        <div class="contact">Contactar: 924984609</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
